@@ -102,7 +102,7 @@ $(function() { h5u_parallelism.init({
 						scrollZoneDelay:	20,			// Time (in ms) to wait between scrolls when the cursor is in a scroll zone
 						scrollZoneWidth:	40,			// Width of scroll zones
 						thumbDelay:			500,		// Delay (in ms) before showing thumbnails
-						thumbDelaySpread:	1000,		// Spread (in ms) to randomly stagger thumbnails (0 = don't stagger)
+						thumbDelaySpread:	500,		// Spread (in ms) to randomly stagger thumbnails (0 = don't stagger)
 						thumbSpeed:			750,		// Speed (in ms) at which to fade in thumbnails
 						useBlurFilter:		true,		// If true, page will blur slightly when the popup is displayed (webkit only)
 						useScrollKeys:		true,		// If true, the left/right arrow keys will scroll the reel
