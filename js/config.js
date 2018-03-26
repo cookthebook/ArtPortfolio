@@ -91,7 +91,7 @@ $(function() { h5u_parallelism.init({
 						itemWidth:			300,		// Default width (in px) of width
 						marginBottom:		40,			// Margin (in px) to preserve at the bottom of the viewport
 						marginTop:			0,			// Margin (in px) to preserve at the top of the viewport
-						maxRows:			3,			// Maximum number of rows
+						maxRows:			20,			// Maximum number of rows
 						minRows:			1,			// Minimum number of rows
 						padding:			10,			// Padding (in px) between items (0 = no padding)
 						paddingColor:		'#333',		// Padding color
