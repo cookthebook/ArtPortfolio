@@ -1,7 +1,41 @@
 <!DOCTYPE html>
 <html>
-<img src="images/final_art_project/panel1.gif" alt=""
-	style="position:absolute; top:5px; left:5px">
-<img src="images/final_art_project/panel2.gif" alt=""
-	style="position:absolute; top:516px; left:5px">
+
+<div>
+<img src="images/final_art_project/panel1.jpg" alt="" class="panel" id="panel1"
+	style="position:absolute; top:5px; left:5px"
+	data-image="images/final_art_project/panel1.gif">
+
+<img src="images/final_art_project/panel2.jpg" alt="" class="panel" id="panel2"
+	style="position:absolute; top:516px; left:5px"
+	data-image="images/final_art_project/panel2.gif">
+
+<img src="images/final_art_project/panel3.jpg" alt="" class="panel" id="panel3"
+	style="position:absolute; top:516px; left:498px"
+	data-image="images/final_art_project/panel3.gif">
+</div>
+
+<script>
+window.onload = function() {
+  var panels = document.getElementsByClassName("panel");
+  for (var i = 0; i < panels.length; i++) {
+    var panel = panels[i];
+    panel.addEventListener("click", function(event) {
+      var p = event.target;
+      var temp = p.src;
+      var ext = temp.substr(temp.length-3, 3);
+      temp = temp.substr(0, temp.length-3);
+
+      if (ext == "jpg") {
+        ext = "gif";
+      } else {
+        ext = "jpg";
+      }
+
+      p.src = (temp + ext);
+      console.log("Loaded: " + p.src);
+    });
+  }
+};
+</script>
 </html>
