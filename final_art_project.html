@@ -1,26 +1,57 @@
 <!DOCTYPE html>
 <html>
-
-<div>
+<body style="background-color:black">
 <img src="images/final_art_project/panel1.jpg" alt="" class="panel" id="panel1"
-	style="position:absolute; top:5px; left:5px"
+	style="position:absolute; top:5px; left:5px; z-index:1;"
 	data-image="images/final_art_project/panel1.gif">
 
 <img src="images/final_art_project/panel2.jpg" alt="" class="panel" id="panel2"
-	style="position:absolute; top:516px; left:5px"
+	style="position:absolute; top:516px; left:5px; z-index:2;"
 	data-image="images/final_art_project/panel2.gif">
 
 <img src="images/final_art_project/panel3.jpg" alt="" class="panel" id="panel3"
-	style="position:absolute; top:516px; left:498px"
+	style="position:absolute; top:516px; left:498px; z-index:3;"
 	data-image="images/final_art_project/panel3.gif">
-</div>
 
+<img src="images/final_art_project/panel4.jpg" alt="" class="panel" id="panel4"
+	style="position:absolute; top:794px; left:5px; z-index:4;"
+	data-image="images/final_art_project/panel4.gif">
+
+<img src="images/final_art_project/panel5.jpg" alt="" class="panel" id="panel5"
+        style="position:absolute; top:1168px; left:5px; z-index:5;"
+        data-image="images/final_art_project/panel5.gif">
+
+<img src="images/final_art_project/panel6.jpg" alt="" class="panel" id="panel6"
+        style="position:absolute; top:794px; left:536px; z-index:6;"
+        data-image="images/final_art_project/panel6.gif">
+
+
+
+<img src="images/final_art_project/panel7.jpg" alt="" class="panel" id="panel7"
+        style="position:absolute; top:5px; left:1065px; z-index:7;"
+        data-image="images/final_art_project/panel7.gif">
+
+<img src="images/final_art_project/panel8.jpg" alt="" class="panel" id="panel8"
+        style="position:absolute; top:760px; left:1065px; z-index:8;"
+        data-image="images/final_art_project/panel8.gif">
+
+<img src="images/final_art_project/panel9.jpg" alt="" class="panel" id="panel9"
+        style="position:absolute; top:760px; left:1570px; z-index:9;"
+        data-image="images/final_art_project/panel9.gif">
+
+<img src="images/final_art_project/panel10.jpg" alt="" class="panel" id="panel9"
+        style="position:absolute; top:1164px; left:1065px; z-index:10;"
+        data-image="images/final_art_project/panel10.gif">
 <script>
 window.onload = function() {
   var panels = document.getElementsByClassName("panel");
   for (var i = 0; i < panels.length; i++) {
     var panel = panels[i];
     panel.addEventListener("click", function(event) {
+      for (var j = 0; j < panels.length; j++) {
+        if (panels[j] != event.target) panels[j].src = panels[j].src.substr(0, panels[j].src.length-3) + "jpg";
+      }
+
       var p = event.target;
       var temp = p.src;
       var ext = temp.substr(temp.length-3, 3);
@@ -38,4 +69,5 @@ window.onload = function() {
   }
 };
 </script>
+</body?
 </html>
